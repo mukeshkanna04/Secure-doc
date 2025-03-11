@@ -1,0 +1,31 @@
+{
+    "name": "cloud-storage-project",
+    "version": "1.0.0",
+    "description": "A simple cloud storage project using Node.js and Express",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^3.0.2",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "firebase-admin": "^13.2.0",
+        "multer": "^1.4.5-lts.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "keywords": [
+        "nodejs",
+        "express",
+        "firebase",
+        "storage"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+}
