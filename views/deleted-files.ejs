@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Files</title>
+    <link rel="stylesheet" href="/css/deleted.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🗑️ Deleted Files</h2>
+        <table>
+            <tr>
+                <th>File Name</th>
+                <th>File Size</th>
+                <th>Restore</th>
+                <th>Permanently Delete</th>
+            </tr>
+            <% if (deletedFiles.length > 0) { %>
+                <% deletedFiles.forEach(file => { %>
+                    <tr>
+                        <td><%= file.name %></td>
+                        <td><%= file.size %> KB</td>
+                        <td>
+                            <form action="/restore/<%= file.name %>" method="POST">
+                                <button type="submit" class="restore-btn">🔄 Restore</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/delete-permanently/<%= file.name %>" method="POST">
+                                <button type="submit" class="delete-btn">❌ Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="4">No deleted files available.</td>
+                </tr>
+            <% } %>
+        </table>
+        <a href="/menu" class="back-btn">⬅ Back to Menu</a>
+    </div>
+</body>
+</html>

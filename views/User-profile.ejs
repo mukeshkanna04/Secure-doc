@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/User-profile.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>User Profile</h2>
+        <p><strong>Username:</strong> <%= user %></p>
+        <p><strong>Joined Date:</strong> <%= user.joinedDate || "03/03/2025" %></p>
+        <p><strong>Last Login:</strong> <%= user.lastLogin || "Just now" %></p>
+        <p><strong>Files Uploaded:</strong> <%= user.fileCount || 5 %></p>
+        <a href="/menu" class="btn">Back to Menu</a>
+    </div>
+</body>
+</html>

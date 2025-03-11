@@ -1,0 +1,83 @@
+/* Apply Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Menu Container */
+.menu-container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Welcome Message */
+.welcome {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Menu Buttons */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-buttons a {
+    text-decoration: none;
+    padding: 22px;
+    border-radius: 28px;
+    font-size: 30px;
+    font-weight: bold;
+    background: #007bff;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.menu-buttons a:hover {
+    background: #0056b3;
+}
+
+/* Logout Button */
+.logout-btn {
+    margin-top: 20px;
+    padding: 10px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #b22234;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

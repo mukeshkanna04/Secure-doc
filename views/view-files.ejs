@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Files</title>
+    <link rel="stylesheet" href="/css/view.css">
+</head>
+<body>
+    <h2>📂 Uploaded Files</h2>
+    <ul>
+        <% if (files.length > 0) { %>
+            <% files.forEach(file => { %>
+                <li>
+                    <%= file.name %> <!-- Correctly displaying the file name -->
+                    <a href="/download/<%= file.name %>">Download</a> |
+                    <a href="/delete/<%= file.name %>">Delete</a>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>No files uploaded yet.</li>
+        <% } %>
+    </ul>
+    <a href="/menu">⬅ Back to Menu</a>
+</body>
+</html>

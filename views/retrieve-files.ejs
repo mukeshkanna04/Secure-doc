@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Files</title>
+    <link rel="stylesheet" href="/css/retrieve.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📂 Downloaded Files</h2>
+
+        <table>
+            <tr>
+                <th>File Name</th>
+                <th>Actions</th>
+            </tr>
+            <% if (files.length > 0) { %>
+                <% files.forEach(file => { %>
+                    <tr>
+                        <td><%= file %></td>
+                        <td>
+                            <a href="/download/<%= file %>" class="btn">⬇ Download</a>
+                            <a href="/delete/<%= file %>" class="btn delete">🗑 Delete</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="2">No downloaded files found.</td>
+                </tr>
+            <% } %>
+        </table>
+
+        <a href="/menu" class="back-btn">⬅ Back to Menu</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/css/menu.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h2>Welcome, <%= user %>!</h2>
+
+        <div class="menu-buttons">
+            <a href="/User-profile" class="User-profile-btn">👤 User profile</a>
+            <a href="/upload" class="upload-btn">📤 Upload File</a>
+            <a href="/view-files" class="view-btn">📂 View Files</a>
+            <a href="/retrieve-files" class="retrieve-btn">🔄 Retrieve Files</a>
+            <a href="/deleted-files" class="deleted-btn">🗑️ Deleted Files</a>
+        </div>
+
+        <div class="logout-container">
+            <form action="/logout" method="POST">
+                <button type="submit" class="logout-btn">🚪 Logout</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

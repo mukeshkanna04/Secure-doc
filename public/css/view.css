@@ -1,0 +1,108 @@
+/* View Files Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.view-files-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Title */
+.view-files-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Table */
+.files-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.files-table th,
+.files-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Table Header */
+.files-table th {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Table Rows */
+.files-table tr:hover {
+    background: #f1f1f1;
+    transition: 0.3s ease;
+}
+
+/* Buttons */
+.action-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #a71d2a;
+}
+
+/* Share Button */
+.share-btn {
+    background: #28a745;
+    color: white;
+}
+
+.share-btn:hover {
+    background: #1e7e34;
+}
+
+/* Preview Button */
+.preview-btn {
+    background: #17a2b8;
+    color: white;
+}
+
+.preview-btn:hover {
+    background: #117a8b;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
